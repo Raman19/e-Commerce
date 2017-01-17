@@ -1,0 +1,18 @@
+CREATE TABLE `product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `product_name` VARCHAR(45) NULL,
+  `stock_number` VARCHAR(45) NULL,
+  `description` VARCHAR(255) NULL,
+  `rating` DECIMAL(2,1) NULL,
+  `reviews` INT(5) NULL,
+  `list_price` INT(5) NULL,
+  `discount_percentage` INT(3) NULL,
+  `discounted_amount` INT(5) NULL,
+  `quantity` INT(3) NULL,
+  `age_restrict` INT(2) NULL,
+  `created_date` TIMESTAMP NULL DEFAULT now(),
+  `modified_date` TIMESTAMP NULL DEFAULT now(),
+  `version` INT(11) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `product_name_UNIQUE` (`product_name` ASC),
+  UNIQUE INDEX `stock_number_UNIQUE` (`stock_number` ASC));
